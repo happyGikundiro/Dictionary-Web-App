@@ -4,7 +4,6 @@ import HomePage from "./Pages/homePage";
 import ContextProvider from "./context/context";
 
 const App: React.FC = () => {
-  // const { mode } = useContext(Context);
   return (
     <ContextProvider>
       <Router>

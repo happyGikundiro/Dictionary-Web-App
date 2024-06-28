@@ -6,7 +6,7 @@ const SearchBar: React.FC = () => {
   const { mode } = useContext(Context);
   return (
     <div
-      className={`flex justify-between bg-[#F4F4F4] w-[100%] px-5 py-2 rounded-xl  ${
+      className={`flex justify-between w-[100%] px-5 py-2 rounded-xl  ${
         mode ? " bg-[#3A3A3A]" : " bg-[#F4F4F4]"
       }`}
     >

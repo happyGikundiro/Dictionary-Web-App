@@ -11,9 +11,10 @@ export const Context = createContext<ContextType>(defaultContext);
 const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [mode, setMode] = useState<boolean>(false);
 
-  function HandleMode(): void {
+  const HandleMode = (): void => {
     setMode((prev) => !prev);
-  }
+  };
+
   return (
     <Context.Provider value={{ HandleMode, mode }}>{children}</Context.Provider>
   );
