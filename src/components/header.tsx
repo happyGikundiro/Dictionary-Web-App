@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           <div>
             <IoMoonOutline
               className={`text-sm ${
-                mode ? "text-[#A445ED]" : "text-[#757575]"
+                mode ? "text-[#A445ED] " : "text-[#757575]"
               }`}
             />
             {/* <p
