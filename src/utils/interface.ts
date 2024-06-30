@@ -8,6 +8,14 @@ export interface ContextType{
     setInputText:(inputText:string)=>void
     data:WordData[]
     setData:(data:WordData[])=>void
+    notFound: NotFound | null;
+    setNotFound: React.Dispatch<React.SetStateAction<NotFound | null>>;
+    inputError: string,
+    setInputError: (inputError: string) => void,
+    HandleSearch:()=>void
+    isLoading: boolean
+    currentFont: string,
+    setCurrentFont: (currentFont: string) => void,
 }
 
 export interface ContextProviderProps{
@@ -46,4 +54,10 @@ export interface License {
     meanings: Meaning[];
     license: License;
     sourceUrls: string[];
+  }
+
+  export interface NotFound {
+    title: string;
+    message: string;
+    resolution?: string;
   }
