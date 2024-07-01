@@ -5,7 +5,7 @@ This repository contains code for a dictionary web app  built using Typescript +
 ## Table of Contents
 - [Demo](https://main--dictionary-web-app-hppy.netlify.app/)
 - [Features](#features)
-- [Screenshoot](#screenshoot)
+- [Screenshoot](#screenshot)
 - [Installation](#installation)
 - [Usage](#usage)
 
