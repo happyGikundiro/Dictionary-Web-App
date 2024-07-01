@@ -9,7 +9,13 @@ const HomePage: React.FC = () => {
 
   return (
     <div
-      className={`font-${currentFont} ${
+      className={`${
+        currentFont === "sans-serif"
+          ? "font-sans-serif"
+          : currentFont === "serif"
+          ? "font-serif"
+          : "font-mono"
+      } ${
         mode ? "bg-[#050505]" : "bg-white"
       } px-5 sm:px-20 lg:px-60 xl:px-80 2xl:px-100 pt-10 space-y-8 min-h-screen`}
     >

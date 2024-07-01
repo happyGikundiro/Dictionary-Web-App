@@ -6,6 +6,11 @@ export default {
       boxShadow: {
         purple: "1px 1px 25px 1px #A445ED",
       },
+      fontFamily: {
+        "sans-serif": ["Helvetica", "Arial", "sans-serif"],
+        serif: ["Georgia", "serif"],
+        mono: ["Menlo", "monospace"],
+      },
     },
   },
   plugins: [],

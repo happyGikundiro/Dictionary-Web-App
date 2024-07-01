@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const FontSelector: React.FC = () => {
   const { mode, currentFont, setCurrentFont } = useContext(Context);
   const [isOpen, setIsOpen] = useState(false);
-  const fontOptions = ["Sans-serif", "serif", "mono"];
+  const fontOptions = ["sans-serif", "serif", "mono"];
 
   const handleFontChange = (font: string) => {
     setCurrentFont(font);
@@ -22,7 +22,11 @@ const FontSelector: React.FC = () => {
         }`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {currentFont}
+        {currentFont === "sans-serif"
+          ? "Sans-serif"
+          : currentFont === "serif"
+          ? "Serif"
+          : "Mono"}
         <span>
           <IoIosArrowDown className="text-purple-500" />
         </span>
@@ -41,9 +45,20 @@ const FontSelector: React.FC = () => {
                 mode ? " text-white" : "bg-white text-black"
               }
                 `}
-              style={{ fontFamily: font }}
+              style={{
+                fontFamily:
+                  font === "sans-serif"
+                    ? "Helvetica, Arial, sans-serif"
+                    : font === "serif"
+                    ? "Georgia, serif"
+                    : "Menlo, monospace",
+              }}
             >
-              {font}
+              {font === "sans-serif"
+                ? "Sans-serif"
+                : font === "serif"
+                ? "Serif"
+                : "Mono"}
             </div>
           ))}
         </div>
